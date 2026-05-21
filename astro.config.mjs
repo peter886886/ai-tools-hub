@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://aitoolbox.pages.dev',
+  site: 'https://ai-tools-hub.vercel.app',
   output: 'static',
+  trailingSlash: 'always',
 });
