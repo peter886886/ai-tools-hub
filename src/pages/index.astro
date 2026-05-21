@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import tools from '../data/tools.json';
+
+const zhTools = tools.map(t => ({
+  ...t,
+  desc: t.zh.desc,
+  category: t.zh.category,
+  tagline: t.zh.tagline,
+}));
+
+const allCategories = [...new Set(zhTools.flatMap(t => t.category))].sort();
+const pricingMap = { free: '免费', freemium: '免费增值', paid: '付费' };
+---
+
+<Layout
+  title="AI 百宝箱 - 发现最好的 AI 工具导航"
+  description="收录 50+ 精选 AI 工具，涵盖对话助手、编程、设计、视频、音频等品类。帮你快速找到最适合的 AI 工具。"
+  lang="zh"
+>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="fade-up">
+          发现最好的 <span class="gradient">AI 工具</span>
+        </h1>
+        <p class="fade-up">精选 {zhTools.length}+ 款 AI 工具，覆盖对话、编程、设计、视频、音频等品类</p>
+
+        <div class="search-box fade-up">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="searchInput" placeholder="搜索 AI 工具..." autocomplete="off" />
+        </div>
+
+        <div class="hero-stats fade-up">
+          <div class="stat">
+            <div class="stat-num">{zhTools.length}+</div>
+            <div class="stat-label">精选工具</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">{allCategories.length}</div>
+            <div class="stat-label">工具品类</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">免费</div>
+            <div class="stat-label">收录推荐</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="section" id="tools">
+      <div class="container">
+        <div class="categories" id="categoryBar">
+          <button class="cat-btn active" data-cat="all">全部 <span class="count">{zhTools.length}</span></button>
+          {allCategories.map(cat => (
+            <button class="cat-btn" data-cat={cat}>
+              {cat} <span class="count">{zhTools.filter(t => t.category.includes(cat)).length}</span>
+            </button>
+          ))}
+        </div>
+
+        <div class="tools-grid" id="toolsGrid">
+          {zhTools.map(tool => (
+            <div class="tool-card" data-categories={tool.category.join(',')} data-name={tool.name.toLowerCase()} data-desc={tool.desc} data-search={`${tool.name} ${tool.desc} ${tool.category.join(' ')} ${tool.tagline}`.toLowerCase()}>
+              <div class="tool-header">
+                <div class="tool-logo">
+                  <img src={tool.logo} alt={tool.name} loading="lazy" onerror="this.style.display='none'" />
+                </div>
+                <div class="tool-info">
+                  <div class="tool-name">
+                    {tool.name}
+                    {tool.hot && <span class="badge badge-hot">HOT</span>}
+                    {tool.pricing === 'free' && <span class="badge badge-free">免费</span>}
+                    {tool.pricing === 'freemium' && <span class="badge badge-freemium">免费增值</span>}
+                    {tool.pricing === 'paid' && <span class="badge badge-paid">付费</span>}
+                  </div>
+                  <div class="tool-tagline">{tool.tagline}</div>
+                </div>
+              </div>
+              <div class="tool-desc">{tool.desc}</div>
+              <div class="tool-tags">
+                {tool.category.map(c => <span class="tool-tag">{c}</span>)}
+              </div>
+              <a href={tool.url} target="_blank" rel="noopener" class="tool-cta">
+                访问官网
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          ))}
+        </div>
+        <div class="no-results" id="noResults" style="display:none">
+          <p>没有找到匹配的工具</p>
+          <p style="font-size:14px">试试其他关键词？</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const toolsGrid = document.getElementById('toolsGrid');
+    const noResults = document.getElementById('noResults');
+    const categoryBar = document.getElementById('categoryBar');
+    let activeCategory = 'all';
+
+    function filterTools() {
+      const query = searchInput.value.toLowerCase().trim();
+      const cards = toolsGrid.querySelectorAll('.tool-card');
+      let visible = 0;
+
+      cards.forEach(card => {
+        const cats = card.dataset.categories;
+        const search = card.dataset.search;
+        const matchCat = activeCategory === 'all' || cats.includes(activeCategory);
+        const matchSearch = !query || search.includes(query);
+
+        if (matchCat && matchSearch) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      noResults.style.display = visible === 0 ? '' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterTools);
+
+    categoryBar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cat-btn');
+      if (!btn) return;
+      categoryBar.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.cat;
+      filterTools();
+    });
+
+    // Auto-focus search from URL params
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('q')) {
+      searchInput.value = params.get('q');
+      filterTools();
+    }
+  </script>
+</Layout>

@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="提交 AI 工具 - AI 百宝箱"
+  description="提交你发现的优秀 AI 工具，帮助更多人发现好用的 AI 工具。"
+  lang="zh"
+>
+  <main>
+    <section class="hero" style="padding: 60px 0 40px">
+      <div class="container">
+        <h1 class="fade-up">提交 <span class="gradient">AI 工具</span></h1>
+        <p class="fade-up">发现了好用的 AI 工具？提交给我们，帮助更多人发现它！</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="container" style="max-width: 640px">
+        <form id="submitForm" class="submit-form">
+          <div class="form-group">
+            <label for="toolName">工具名称 *</label>
+            <input type="text" id="toolName" name="toolName" required placeholder="例如：ChatGPT" />
+          </div>
+          <div class="form-group">
+            <label for="toolUrl">官网地址 *</label>
+            <input type="url" id="toolUrl" name="toolUrl" required placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label for="toolDesc">工具描述 *</label>
+            <textarea id="toolDesc" name="toolDesc" required rows="3" placeholder="简要描述这个工具的功能和特点"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="toolCategory">品类 *</label>
+            <select id="toolCategory" name="toolCategory" required>
+              <option value="">选择品类</option>
+              <option value="对话助手">对话助手</option>
+              <option value="编程">编程</option>
+              <option value="写作">写作</option>
+              <option value="图像生成">图像生成</option>
+              <option value="视频">视频</option>
+              <option value="音频">音频</option>
+              <option value="设计">设计</option>
+              <option value="效率工具">效率工具</option>
+              <option value="营销">营销</option>
+              <option value="搜索">搜索</option>
+              <option value="教育">教育</option>
+              <option value="其他">其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="toolPricing">定价模式</label>
+            <select id="toolPricing" name="toolPricing">
+              <option value="free">免费</option>
+              <option value="freemium">免费增值</option>
+              <option value="paid">付费</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="submitterEmail">你的邮箱（可选）</label>
+            <input type="email" id="submitterEmail" name="submitterEmail" placeholder="your@email.com" />
+          </div>
+          <button type="submit" class="submit-btn">提交工具</button>
+        </form>
+        <div id="successMsg" style="display:none; text-align:center; padding:40px 0">
+          <p style="font-size:48px; margin-bottom:16px">&#10003;</p>
+          <p style="font-size:20px; font-weight:600; margin-bottom:8px">提交成功！</p>
+          <p style="color: var(--text-secondary)">感谢你的推荐，我们会尽快审核。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .submit-form {
+      display: flex; flex-direction: column; gap: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-size: 14px; font-weight: 500; color: var(--text-secondary);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 10px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-size: 15px;
+      font-family: var(--font);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+    }
+    .form-group select { cursor: pointer; }
+    .form-group select option { background: var(--bg); }
+    .submit-btn {
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 16px; font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .submit-btn:hover { opacity: 0.9; }
+  </style>
+
+  <script>
+    const form = document.getElementById('submitForm');
+    const successMsg = document.getElementById('successMsg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // In production, send to a backend or Formspree/Google Forms
+      form.style.display = 'none';
+      successMsg.style.display = '';
+    });
+  </script>
+</Layout>

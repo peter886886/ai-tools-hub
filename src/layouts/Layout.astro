@@ -1,0 +1,359 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  lang?: 'zh' | 'en';
+  canonical?: string;
+}
+
+const { title, description, lang = 'zh', canonical } = Astro.props;
+const siteUrl = 'https://aitoolbox.pages.dev';
+const currentUrl = canonical || Astro.url.href;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:site_name" content={lang === 'zh' ? 'AI 百宝箱' : 'AI ToolBox'} />
+    <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+
+    <style is:global>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      :root {
+        --bg: #0a0a0a;
+        --bg-card: #141414;
+        --bg-card-hover: #1a1a1a;
+        --border: #262626;
+        --text: #e5e5e5;
+        --text-secondary: #a3a3a3;
+        --text-muted: #737373;
+        --accent: #6366f1;
+        --accent-light: #818cf8;
+        --accent-glow: rgba(99, 102, 241, 0.15);
+        --green: #22c55e;
+        --orange: #f59e0b;
+        --red: #ef4444;
+        --radius: 12px;
+        --radius-sm: 8px;
+        --max-w: 1200px;
+        --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; height: auto; }
+      .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+      /* Header */
+      .header {
+        position: sticky; top: 0; z-index: 100;
+        background: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+      }
+      .header-inner {
+        display: flex; align-items: center; justify-content: space-between;
+        height: 64px;
+      }
+      .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 20px; }
+      .logo-icon {
+        width: 32px; height: 32px;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        border-radius: 8px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 18px;
+      }
+      .nav { display: flex; gap: 24px; }
+      .nav a { color: var(--text-secondary); font-size: 14px; transition: color 0.2s; }
+      .nav a:hover { color: var(--text); }
+      .lang-switch {
+        display: flex; gap: 4px; background: var(--bg-card); border-radius: 8px; padding: 4px;
+      }
+      .lang-switch a {
+        padding: 4px 12px; border-radius: 6px; font-size: 13px;
+        color: var(--text-muted); transition: all 0.2s;
+      }
+      .lang-switch a.active { background: var(--accent); color: white; }
+
+      /* Hero */
+      .hero {
+        padding: 80px 0 60px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: '';
+        position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+        width: 800px; height: 800px;
+        background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .hero h1 {
+        font-size: clamp(32px, 5vw, 56px);
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 16px;
+      }
+      .hero h1 .gradient {
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero p {
+        font-size: 18px;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 32px;
+      }
+      .hero-stats {
+        display: flex; justify-content: center; gap: 48px;
+        margin-top: 40px;
+      }
+      .hero-stats .stat { text-align: center; }
+      .hero-stats .stat-num {
+        font-size: 32px; font-weight: 800;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-stats .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
+
+      /* Search */
+      .search-box {
+        max-width: 560px; margin: 0 auto; position: relative;
+      }
+      .search-box input {
+        width: 100%; padding: 14px 20px 14px 48px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        color: var(--text);
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .search-box input:focus { border-color: var(--accent); }
+      .search-box input::placeholder { color: var(--text-muted); }
+      .search-box .search-icon {
+        position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+        color: var(--text-muted);
+      }
+
+      /* Categories */
+      .categories {
+        display: flex; flex-wrap: wrap; gap: 8px;
+        justify-content: center;
+        margin: 32px 0;
+      }
+      .cat-btn {
+        padding: 8px 16px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        color: var(--text-secondary);
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .cat-btn:hover, .cat-btn.active {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+      }
+      .cat-btn .count {
+        display: inline-block;
+        background: rgba(255,255,255,0.15);
+        border-radius: 10px;
+        padding: 1px 8px;
+        margin-left: 6px;
+        font-size: 12px;
+      }
+
+      /* Tool Grid */
+      .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 16px;
+        padding: 24px 0 60px;
+      }
+      .tool-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+        transition: all 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .tool-card:hover {
+        background: var(--bg-card-hover);
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+      }
+      .tool-header { display: flex; align-items: center; gap: 12px; }
+      .tool-logo {
+        width: 44px; height: 44px;
+        border-radius: 10px;
+        background: var(--bg);
+        display: flex; align-items: center; justify-content: center;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .tool-logo img { width: 28px; height: 28px; object-fit: contain; }
+      .tool-info { flex: 1; min-width: 0; }
+      .tool-name {
+        font-size: 16px; font-weight: 600;
+        display: flex; align-items: center; gap: 8px;
+      }
+      .tool-name .badge {
+        font-size: 10px; padding: 2px 6px; border-radius: 4px;
+        font-weight: 500; text-transform: uppercase;
+      }
+      .badge-hot { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+      .badge-free { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
+      .badge-freemium { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+      .badge-paid { background: rgba(163, 163, 163, 0.15); color: #a3a3a3; }
+      .tool-tagline {
+        font-size: 13px; color: var(--text-muted);
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      }
+      .tool-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+      .tool-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+      .tool-tag {
+        font-size: 12px; padding: 3px 10px;
+        background: rgba(99, 102, 241, 0.1);
+        color: var(--accent-light);
+        border-radius: 12px;
+      }
+      .tool-cta {
+        display: inline-flex; align-items: center; gap: 6px;
+        margin-top: auto;
+        padding: 8px 16px;
+        background: linear-gradient(135deg, #6366f1, #4f46e5);
+        color: white;
+        border-radius: var(--radius-sm);
+        font-size: 14px; font-weight: 500;
+        transition: opacity 0.2s;
+        align-self: flex-start;
+      }
+      .tool-cta:hover { opacity: 0.9; }
+
+      /* Section */
+      .section { padding: 60px 0; }
+      .section-title {
+        font-size: 28px; font-weight: 700; margin-bottom: 8px;
+      }
+      .section-desc { color: var(--text-secondary); margin-bottom: 32px; }
+
+      /* Footer */
+      .footer {
+        border-top: 1px solid var(--border);
+        padding: 40px 0;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 14px;
+      }
+      .footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 16px; }
+      .footer-links a { color: var(--text-secondary); transition: color 0.2s; }
+      .footer-links a:hover { color: var(--text); }
+
+      /* No results */
+      .no-results {
+        text-align: center; padding: 60px 20px;
+        color: var(--text-muted);
+      }
+      .no-results p { font-size: 18px; margin-bottom: 8px; }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav { display: none; }
+        .hero { padding: 48px 0 40px; }
+        .hero-stats { gap: 24px; }
+        .hero-stats .stat-num { font-size: 24px; }
+        .tools-grid { grid-template-columns: 1fr; }
+      }
+
+      /* Animations */
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-up { animation: fadeUp 0.5s ease forwards; }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href={lang === 'en' ? '/en/' : '/'} class="logo">
+          <span class="logo-icon">AI</span>
+          <span>{lang === 'zh' ? 'AI 百宝箱' : 'AI ToolBox'}</span>
+        </a>
+        <nav class="nav">
+          <a href={lang === 'en' ? '/en/' : '/'}>{lang === 'zh' ? '首页' : 'Home'}</a>
+          <a href={`#${lang === 'zh' ? 'tools' : 'tools'}`}>{lang === 'zh' ? '工具' : 'Tools'}</a>
+        </nav>
+        <div class="lang-switch">
+          <a href="/" class={lang === 'zh' ? 'active' : ''}>中文</a>
+          <a href="/en/" class={lang === 'en' ? 'active' : ''}>EN</a>
+        </div>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href={lang === 'en' ? '/en/' : '/'}>{lang === 'zh' ? '首页' : 'Home'}</a>
+          <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+        <p>&copy; 2026 {lang === 'zh' ? 'AI 百宝箱' : 'AI ToolBox'} &mdash; {lang === 'zh' ? '发现最好的 AI 工具' : 'Discover the best AI tools'}</p>
+      </div>
+    </footer>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": lang === 'zh' ? 'AI 百宝箱' : 'AI ToolBox',
+      "url": siteUrl,
+      "description": description,
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": siteUrl + "/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    })} />
+  </body>
+</html>

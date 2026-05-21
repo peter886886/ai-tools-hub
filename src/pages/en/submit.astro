@@ -1,0 +1,109 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Submit AI Tool - AI ToolBox"
+  description="Submit an AI tool you've discovered to help others find great AI tools."
+  lang="en"
+>
+  <main>
+    <section class="hero" style="padding: 60px 0 40px">
+      <div class="container">
+        <h1 class="fade-up">Submit <span class="gradient">AI Tool</span></h1>
+        <p class="fade-up">Found a great AI tool? Submit it to help others discover it!</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="container" style="max-width: 640px">
+        <form id="submitForm" class="submit-form">
+          <div class="form-group">
+            <label for="toolName">Tool Name *</label>
+            <input type="text" id="toolName" name="toolName" required placeholder="e.g. ChatGPT" />
+          </div>
+          <div class="form-group">
+            <label for="toolUrl">Website URL *</label>
+            <input type="url" id="toolUrl" name="toolUrl" required placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label for="toolDesc">Description *</label>
+            <textarea id="toolDesc" name="toolDesc" required rows="3" placeholder="Briefly describe what this tool does"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="toolCategory">Category *</label>
+            <select id="toolCategory" name="toolCategory" required>
+              <option value="">Select category</option>
+              <option value="Chatbot">Chatbot</option>
+              <option value="Coding">Coding</option>
+              <option value="Writing">Writing</option>
+              <option value="Image Generation">Image Generation</option>
+              <option value="Video">Video</option>
+              <option value="Audio">Audio</option>
+              <option value="Design">Design</option>
+              <option value="Productivity">Productivity</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Search">Search</option>
+              <option value="Education">Education</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="toolPricing">Pricing</label>
+            <select id="toolPricing" name="toolPricing">
+              <option value="free">Free</option>
+              <option value="freemium">Freemium</option>
+              <option value="paid">Paid</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="submitterEmail">Your Email (optional)</label>
+            <input type="email" id="submitterEmail" name="submitterEmail" placeholder="your@email.com" />
+          </div>
+          <button type="submit" class="submit-btn">Submit Tool</button>
+        </form>
+        <div id="successMsg" style="display:none; text-align:center; padding:40px 0">
+          <p style="font-size:48px; margin-bottom:16px">&#10003;</p>
+          <p style="font-size:20px; font-weight:600; margin-bottom:8px">Submitted!</p>
+          <p style="color: var(--text-secondary)">Thanks for your recommendation. We'll review it soon.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .submit-form {
+      display: flex; flex-direction: column; gap: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 14px; font-weight: 500; color: var(--text-secondary); }
+    .form-group input, .form-group textarea, .form-group select {
+      padding: 10px 14px; background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); color: var(--text); font-size: 15px;
+      font-family: var(--font); outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); }
+    .form-group select { cursor: pointer; }
+    .form-group select option { background: var(--bg); }
+    .submit-btn {
+      padding: 12px 24px; background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: white; border: none; border-radius: var(--radius-sm);
+      font-size: 16px; font-weight: 600; cursor: pointer; transition: opacity 0.2s;
+    }
+    .submit-btn:hover { opacity: 0.9; }
+  </style>
+
+  <script>
+    const form = document.getElementById('submitForm');
+    const successMsg = document.getElementById('successMsg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.style.display = 'none';
+      successMsg.style.display = '';
+    });
+  </script>
+</Layout>

@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import tools from '../../data/tools.json';
+
+const enTools = tools.map(t => ({
+  ...t,
+  desc: t.en.desc,
+  category: t.en.category,
+  tagline: t.en.tagline,
+}));
+
+const allCategories = [...new Set(enTools.flatMap(t => t.category))].sort();
+---
+
+<Layout
+  title="AI ToolBox - Discover the Best AI Tools"
+  description="Curated collection of 50+ AI tools across chatbots, coding, design, video, audio and more. Find the perfect AI tool for your needs."
+  lang="en"
+>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="fade-up">
+          Discover the Best <span class="gradient">AI Tools</span>
+        </h1>
+        <p class="fade-up">Curated {enTools.length}+ AI tools across chatbots, coding, design, video, audio & more</p>
+
+        <div class="search-box fade-up">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="searchInput" placeholder="Search AI tools..." autocomplete="off" />
+        </div>
+
+        <div class="hero-stats fade-up">
+          <div class="stat">
+            <div class="stat-num">{enTools.length}+</div>
+            <div class="stat-label">Tools</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">{allCategories.length}</div>
+            <div class="stat-label">Categories</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Free</div>
+            <div class="stat-label">To List</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="container">
+        <div class="categories" id="categoryBar">
+          <button class="cat-btn active" data-cat="all">All <span class="count">{enTools.length}</span></button>
+          {allCategories.map(cat => (
+            <button class="cat-btn" data-cat={cat}>
+              {cat} <span class="count">{enTools.filter(t => t.category.includes(cat)).length}</span>
+            </button>
+          ))}
+        </div>
+
+        <div class="tools-grid" id="toolsGrid">
+          {enTools.map(tool => (
+            <div class="tool-card" data-categories={tool.category.join(',')} data-search={`${tool.name} ${tool.desc} ${tool.category.join(' ')} ${tool.tagline}`.toLowerCase()}>
+              <div class="tool-header">
+                <div class="tool-logo">
+                  <img src={tool.logo} alt={tool.name} loading="lazy" onerror="this.style.display='none'" />
+                </div>
+                <div class="tool-info">
+                  <div class="tool-name">
+                    {tool.name}
+                    {tool.hot && <span class="badge badge-hot">HOT</span>}
+                    {tool.pricing === 'free' && <span class="badge badge-free">Free</span>}
+                    {tool.pricing === 'freemium' && <span class="badge badge-freemium">Freemium</span>}
+                    {tool.pricing === 'paid' && <span class="badge badge-paid">Paid</span>}
+                  </div>
+                  <div class="tool-tagline">{tool.tagline}</div>
+                </div>
+              </div>
+              <div class="tool-desc">{tool.desc}</div>
+              <div class="tool-tags">
+                {tool.category.map(c => <span class="tool-tag">{c}</span>)}
+              </div>
+              <a href={tool.url} target="_blank" rel="noopener" class="tool-cta">
+                Visit Site
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          ))}
+        </div>
+        <div class="no-results" id="noResults" style="display:none">
+          <p>No tools found</p>
+          <p style="font-size:14px">Try different keywords?</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const toolsGrid = document.getElementById('toolsGrid');
+    const noResults = document.getElementById('noResults');
+    const categoryBar = document.getElementById('categoryBar');
+    let activeCategory = 'all';
+
+    function filterTools() {
+      const query = searchInput.value.toLowerCase().trim();
+      const cards = toolsGrid.querySelectorAll('.tool-card');
+      let visible = 0;
+      cards.forEach(card => {
+        const cats = card.dataset.categories;
+        const search = card.dataset.search;
+        const matchCat = activeCategory === 'all' || cats.includes(activeCategory);
+        const matchSearch = !query || search.includes(query);
+        card.style.display = (matchCat && matchSearch) ? '' : 'none';
+        if (matchCat && matchSearch) visible++;
+      });
+      noResults.style.display = visible === 0 ? '' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterTools);
+    categoryBar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cat-btn');
+      if (!btn) return;
+      categoryBar.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.cat;
+      filterTools();
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('q')) { searchInput.value = params.get('q'); filterTools(); }
+  </script>
+</Layout>

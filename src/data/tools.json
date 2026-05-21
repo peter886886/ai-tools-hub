@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
+    "pricing": "freemium",
+    "featured": true,
+    "hot": true,
+    "zh": {
+      "desc": "OpenAI 旗舰对话 AI，支持文本、图像、代码等多种任务",
+      "category": ["对话助手", "写作", "编程"],
+      "tagline": "最流行的 AI 对话工具"
+    },
+    "en": {
+      "desc": "OpenAI's flagship conversational AI for text, images, code and more",
+      "category": ["Chatbot", "Writing", "Coding"],
+      "tagline": "The most popular AI chatbot"
+    }
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "url": "https://claude.ai",
+    "logo": "https://cdn.worldvectorlogo.com/logos/anthropic-2.svg",
+    "pricing": "freemium",
+    "featured": true,
+    "hot": true,
+    "zh": {
+      "desc": "Anthropic 出品，擅长长文本理解和复杂推理，安全性高",
+      "category": ["对话助手", "写作", "编程"],
+      "tagline": "安全可靠的 AI 助手"
+    },
+    "en": {
+      "desc": "By Anthropic, excels at long-context understanding and complex reasoning",
+      "category": ["Chatbot", "Writing", "Coding"],
+      "tagline": "Safe and reliable AI assistant"
+    }
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "url": "https://gemini.google.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/google-gemini-icon.svg",
+    "pricing": "free",
+    "featured": true,
+    "zh": {
+      "desc": "Google 多模态 AI，深度整合 Google 搜索和生态",
+      "category": ["对话助手", "搜索"],
+      "tagline": "Google 的多模态 AI"
+    },
+    "en": {
+      "desc": "Google's multimodal AI, deeply integrated with Google Search",
+      "category": ["Chatbot", "Search"],
+      "tagline": "Google's multimodal AI"
+    }
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "url": "https://chat.deepseek.com",
+    "logo": "https://chat.deepseek.com/favicon.ico",
+    "pricing": "free",
+    "featured": true,
+    "hot": true,
+    "zh": {
+      "desc": "国产开源大模型，推理能力强，完全免费使用",
+      "category": ["对话助手", "编程"],
+      "tagline": "免费的国产推理模型"
+    },
+    "en": {
+      "desc": "Chinese open-source LLM with strong reasoning, completely free",
+      "category": ["Chatbot", "Coding"],
+      "tagline": "Free Chinese reasoning model"
+    }
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "url": "https://midjourney.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/midjourney-icon-1.svg",
+    "pricing": "paid",
+    "featured": true,
+    "hot": true,
+    "zh": {
+      "desc": "顶级 AI 绘画工具，生成质量极高，艺术感强",
+      "category": ["图像生成"],
+      "tagline": "顶级 AI 绘画工具"
+    },
+    "en": {
+      "desc": "Top-tier AI image generation with exceptional quality and artistic flair",
+      "category": ["Image Generation"],
+      "tagline": "Top-tier AI art tool"
+    }
+  },
+  {
+    "id": "dalle",
+    "name": "DALL·E 3",
+    "url": "https://openai.com/dall-e-3",
+    "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
+    "pricing": "paid",
+    "zh": {
+      "desc": "OpenAI 图像生成模型，文字理解精准，ChatGPT 内置",
+      "category": ["图像生成"],
+      "tagline": "文字理解最准的 AI 绘画"
+    },
+    "en": {
+      "desc": "OpenAI's image model with excellent text understanding, built into ChatGPT",
+      "category": ["Image Generation"],
+      "tagline": "Best text understanding in AI art"
+    }
+  },
+  {
+    "id": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "url": "https://stability.ai",
+    "logo": "https://cdn.worldvectorlogo.com/logos/stable-diffusion-icon.svg",
+    "pricing": "free",
+    "zh": {
+      "desc": "开源图像生成模型，可本地部署，自由度极高",
+      "category": ["图像生成"],
+      "tagline": "开源可本地部署的 AI 绘画"
+    },
+    "en": {
+      "desc": "Open-source image generation, runs locally with maximum flexibility",
+      "category": ["Image Generation"],
+      "tagline": "Open-source local AI art"
+    }
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "url": "https://cursor.sh",
+    "logo": "https://cursor.sh/favicon.ico",
+    "pricing": "freemium",
+    "featured": true,
+    "hot": true,
+    "zh": {
+      "desc": "AI 编程 IDE，基于 VSCode，代码补全和对话编程一体化",
+      "category": ["编程"],
+      "tagline": "最火的 AI 编程 IDE"
+    },
+    "en": {
+      "desc": "AI-first code editor based on VSCode with inline completions and chat",
+      "category": ["Coding"],
+      "tagline": "The hottest AI code editor"
+    }
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "logo": "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg",
+    "pricing": "paid",
+    "zh": {
+      "desc": "GitHub 官方 AI 编程助手，深度整合 VSCode 和 GitHub",
+      "category": ["编程"],
+      "tagline": "GitHub 官方 AI 编程助手"
+    },
+    "en": {
+      "desc": "GitHub's official AI coding assistant, deeply integrated with VSCode",
+      "category": ["Coding"],
+      "tagline": "GitHub's official AI pair programmer"
+    }
+  },
+  {
+    "id": "v0",
+    "name": "v0 by Vercel",
+    "url": "https://v0.dev",
+    "logo": "https://v0.dev/favicon.ico",
+    "pricing": "freemium",
+    "featured": true,
+    "zh": {
+      "desc": "AI 生成前端 UI，描述需求即可生成 React 组件",
+      "category": ["编程", "设计"],
+      "tagline": "AI 生成前端 UI 组件"
+    },
+    "en": {
+      "desc": "Generate React UI components from text descriptions",
+      "category": ["Coding", "Design"],
+      "tagline": "AI-powered frontend UI generation"
+    }
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "url": "https://notion.so",
+    "logo": "https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg",
+    "pricing": "paid",
+    "zh": {
+      "desc": "Notion 内置 AI，支持文档写作、总结、翻译、头脑风暴",
+      "category": ["写作", "效率工具"],
+      "tagline": "Notion 内置 AI 写作助手"
+    },
+    "en": {
+      "desc": "Built-in AI for Notion: writing, summarizing, translating, brainstorming",
+      "category": ["Writing", "Productivity"],
+      "tagline": "AI writing assistant inside Notion"
+    }
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "url": "https://jasper.ai",
+    "logo": "https://www.jasper.ai/favicon.ico",
+    "pricing": "paid",
+    "zh": {
+      "desc": "企业级 AI 营销文案工具，支持品牌语调定制",
+      "category": ["写作", "营销"],
+      "tagline": "企业级 AI 营销文案"
+    },
+    "en": {
+      "desc": "Enterprise AI marketing copy with brand voice customization",
+      "category": ["Writing", "Marketing"],
+      "tagline": "Enterprise AI marketing copy"
+    }
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "url": "https://copy.ai",
+    "logo": "https://www.copy.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 文案生成器，专注营销文案、社交媒体内容",
+      "category": ["写作", "营销"],
+      "tagline": "AI 营销文案生成器"
+    },
+    "en": {
+      "desc": "AI copywriting for marketing and social media content",
+      "category": ["Writing", "Marketing"],
+      "tagline": "AI marketing copy generator"
+    }
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "url": "https://grammarly.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/grammarly-1.svg",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 英文写作助手，语法检查、风格优化、AI 改写",
+      "category": ["写作"],
+      "tagline": "AI 英文写作助手"
+    },
+    "en": {
+      "desc": "AI writing assistant: grammar check, style optimization, AI rewriting",
+      "category": ["Writing"],
+      "tagline": "AI English writing assistant"
+    }
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "url": "https://suno.com",
+    "logo": "https://suno.com/favicon.ico",
+    "pricing": "freemium",
+    "featured": true,
+    "hot": true,
+    "zh": {
+      "desc": "AI 音乐生成，输入文字描述即可创作完整歌曲",
+      "category": ["音频"],
+      "tagline": "AI 一键生成完整歌曲"
+    },
+    "en": {
+      "desc": "AI music generation: create full songs from text descriptions",
+      "category": ["Audio"],
+      "tagline": "AI full-song generation"
+    }
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "logo": "https://elevenlabs.io/favicon.ico",
+    "pricing": "freemium",
+    "featured": true,
+    "zh": {
+      "desc": "最逼真的 AI 语音合成和克隆，支持多语言",
+      "category": ["音频"],
+      "tagline": "最逼真的 AI 语音合成"
+    },
+    "en": {
+      "desc": "Most realistic AI voice synthesis and cloning, multilingual",
+      "category": ["Audio"],
+      "tagline": "Most realistic AI voice synthesis"
+    }
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "url": "https://heygen.com",
+    "logo": "https://www.heygen.com/favicon.ico",
+    "pricing": "paid",
+    "featured": true,
+    "zh": {
+      "desc": "AI 数字人视频生成，输入文字自动生成口播视频",
+      "category": ["视频"],
+      "tagline": "AI 数字人口播视频"
+    },
+    "en": {
+      "desc": "AI avatar video generation: text-to-talking-head videos",
+      "category": ["Video"],
+      "tagline": "AI talking avatar videos"
+    }
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "url": "https://runwayml.com",
+    "logo": "https://runwayml.com/favicon.ico",
+    "pricing": "freemium",
+    "featured": true,
+    "zh": {
+      "desc": "AI 视频生成和编辑，文生视频、图生视频",
+      "category": ["视频"],
+      "tagline": "AI 视频生成和编辑"
+    },
+    "en": {
+      "desc": "AI video generation and editing: text-to-video, image-to-video",
+      "category": ["Video"],
+      "tagline": "AI video generation & editing"
+    }
+  },
+  {
+    "id": "kling",
+    "name": "可灵 AI",
+    "url": "https://klingai.com",
+    "logo": "https://klingai.com/favicon.ico",
+    "pricing": "freemium",
+    "hot": true,
+    "zh": {
+      "desc": "快手出品的 AI 视频生成工具，效果媲美 Sora",
+      "category": ["视频"],
+      "tagline": "国产 AI 视频生成新星"
+    },
+    "en": {
+      "desc": "AI video generation by Kuaishou, rivaling Sora in quality",
+      "category": ["Video"],
+      "tagline": "Chinese AI video generation rising star"
+    }
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "url": "https://perplexity.ai",
+    "logo": "https://www.perplexity.ai/favicon.ico",
+    "pricing": "freemium",
+    "featured": true,
+    "hot": true,
+    "zh": {
+      "desc": "AI 搜索引擎，回答附带来源引用，替代传统搜索",
+      "category": ["搜索", "对话助手"],
+      "tagline": "AI 搜索引擎，附带引用"
+    },
+    "en": {
+      "desc": "AI search engine with source citations, a search alternative",
+      "category": ["Search", "Chatbot"],
+      "tagline": "AI search with citations"
+    }
+  },
+  {
+    "id": "poe",
+    "name": "Poe",
+    "url": "https://poe.com",
+    "logo": "https://poe.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "Quora 出品的 AI 聚合平台，一个账号用多种模型",
+      "category": ["对话助手"],
+      "tagline": "多模型 AI 聚合平台"
+    },
+    "en": {
+      "desc": "AI aggregator by Quora: access multiple models with one account",
+      "category": ["Chatbot"],
+      "tagline": "Multi-model AI platform"
+    }
+  },
+  {
+    "id": "coze",
+    "name": "Coze (扣子)",
+    "url": "https://coze.com",
+    "logo": "https://www.coze.com/favicon.ico",
+    "pricing": "free",
+    "hot": true,
+    "zh": {
+      "desc": "字节跳动 AI Bot 构建平台，零代码创建 AI 应用",
+      "category": ["效率工具", "对话助手"],
+      "tagline": "零代码构建 AI Bot"
+    },
+    "en": {
+      "desc": "ByteDance's no-code AI bot builder platform",
+      "category": ["Productivity", "Chatbot"],
+      "tagline": "No-code AI bot builder"
+    }
+  },
+  {
+    "id": "dify",
+    "name": "Dify",
+    "url": "https://dify.ai",
+    "logo": "https://dify.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "开源 LLM 应用开发平台，支持 RAG、Agent、工作流",
+      "category": ["编程", "效率工具"],
+      "tagline": "开源 LLM 应用开发平台"
+    },
+    "en": {
+      "desc": "Open-source LLM app dev platform with RAG, Agent, and workflows",
+      "category": ["Coding", "Productivity"],
+      "tagline": "Open-source LLM app platform"
+    }
+  },
+  {
+    "id": "canva-ai",
+    "name": "Canva AI",
+    "url": "https://canva.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/canva-1.svg",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "Canva 内置 AI 设计功能，文生图、AI 模板、智能编辑",
+      "category": ["设计", "图像生成"],
+      "tagline": "Canva 内置 AI 设计"
+    },
+    "en": {
+      "desc": "Canva's built-in AI: text-to-image, AI templates, smart editing",
+      "category": ["Design", "Image Generation"],
+      "tagline": "AI design inside Canva"
+    }
+  },
+  {
+    "id": "figma-ai",
+    "name": "Figma AI",
+    "url": "https://figma.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "Figma AI 功能，自动布局、AI 生成设计稿",
+      "category": ["设计"],
+      "tagline": "Figma AI 设计助手"
+    },
+    "en": {
+      "desc": "Figma AI features: auto layout, AI-generated design mockups",
+      "category": ["Design"],
+      "tagline": "Figma AI design assistant"
+    }
+  },
+  {
+    "id": "remove-bg",
+    "name": "Remove.bg",
+    "url": "https://remove.bg",
+    "logo": "https://www.remove.bg/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 一键抠图，秒级去除背景，效果精准",
+      "category": ["图像生成"],
+      "tagline": "AI 一键抠图去背景"
+    },
+    "en": {
+      "desc": "AI-powered instant background removal, precise results",
+      "category": ["Image Generation"],
+      "tagline": "AI instant background removal"
+    }
+  },
+  {
+    "id": "upscale",
+    "name": "Upscayl",
+    "url": "https://upscayl.org",
+    "logo": "https://upscayl.org/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "开源 AI 图片放大工具，本地运行，无损放大",
+      "category": ["图像生成"],
+      "tagline": "开源 AI 图片无损放大"
+    },
+    "en": {
+      "desc": "Open-source AI image upscaler, runs locally, lossless upscaling",
+      "category": ["Image Generation"],
+      "tagline": "Open-source AI image upscaler"
+    }
+  },
+  {
+    "id": "otter",
+    "name": "Otter.ai",
+    "url": "https://otter.ai",
+    "logo": "https://otter.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 会议转录和笔记工具，自动记录、总结会议",
+      "category": ["效率工具"],
+      "tagline": "AI 会议自动转录笔记"
+    },
+    "en": {
+      "desc": "AI meeting transcription and note-taking, auto-summarize",
+      "category": ["Productivity"],
+      "tagline": "AI meeting transcription"
+    }
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "url": "https://descript.com",
+    "logo": "https://www.descript.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 音视频编辑，像编辑文档一样编辑视频",
+      "category": ["视频", "音频"],
+      "tagline": "像编辑文档一样编辑视频"
+    },
+    "en": {
+      "desc": "AI audio/video editor: edit video like a document",
+      "category": ["Video", "Audio"],
+      "tagline": "Edit video like a doc"
+    }
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "url": "https://synthesia.io",
+    "logo": "https://www.synthesia.io/favicon.ico",
+    "pricing": "paid",
+    "zh": {
+      "desc": "企业级 AI 数字人视频平台，150+ 数字人形象",
+      "category": ["视频"],
+      "tagline": "企业级 AI 数字人视频"
+    },
+    "en": {
+      "desc": "Enterprise AI avatar video platform with 150+ avatars",
+      "category": ["Video"],
+      "tagline": "Enterprise AI avatar videos"
+    }
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "url": "https://gamma.app",
+    "logo": "https://gamma.app/favicon.ico",
+    "pricing": "freemium",
+    "featured": true,
+    "zh": {
+      "desc": "AI 一键生成演示文稿/文档/网页，设计感强",
+      "category": ["效率工具", "设计"],
+      "tagline": "AI 一键生成精美演示文稿"
+    },
+    "en": {
+      "desc": "AI-generated presentations, documents, and webpages with great design",
+      "category": ["Productivity", "Design"],
+      "tagline": "AI beautiful presentations"
+    }
+  },
+  {
+    "id": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "url": "https://beautiful.ai",
+    "logo": "https://www.beautiful.ai/favicon.ico",
+    "pricing": "paid",
+    "zh": {
+      "desc": "AI 演示文稿工具，自动排版和设计优化",
+      "category": ["效率工具", "设计"],
+      "tagline": "AI 自动排版演示文稿"
+    },
+    "en": {
+      "desc": "AI presentation tool with automatic layout and design optimization",
+      "category": ["Productivity", "Design"],
+      "tagline": "AI auto-layout presentations"
+    }
+  },
+  {
+    "id": "monica",
+    "name": "Monica",
+    "url": "https://monica.im",
+    "logo": "https://monica.im/favicon.ico",
+    "pricing": "freemium",
+    "hot": true,
+    "zh": {
+      "desc": "Chrome AI 助手插件，集成了多种模型，随用随开",
+      "category": ["对话助手", "效率工具"],
+      "tagline": "Chrome 万能 AI 助手插件"
+    },
+    "en": {
+      "desc": "Chrome AI assistant extension with multiple models, use anywhere",
+      "category": ["Chatbot", "Productivity"],
+      "tagline": "Chrome all-in-one AI assistant"
+    }
+  },
+  {
+    "id": "merlin",
+    "name": "Merlin",
+    "url": "https://merlin.foyer.work",
+    "logo": "https://merlin.foyer.work/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "浏览器 AI 助手，任意网页上使用 AI，支持多种模型",
+      "category": ["对话助手", "效率工具"],
+      "tagline": "浏览器 AI 万能助手"
+    },
+    "en": {
+      "desc": "Browser AI assistant, use AI on any webpage, multiple models",
+      "category": ["Chatbot", "Productivity"],
+      "tagline": "Browser AI assistant"
+    }
+  },
+  {
+    "id": "todo-ai",
+    "name": "Taskade AI",
+    "url": "https://taskade.com",
+    "logo": "https://www.taskade.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 驱动的项目管理和团队协作工具",
+      "category": ["效率工具"],
+      "tagline": "AI 项目管理和协作"
+    },
+    "en": {
+      "desc": "AI-powered project management and team collaboration",
+      "category": ["Productivity"],
+      "tagline": "AI project management"
+    }
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "url": "https://replit.com",
+    "logo": "https://replit.com/public/icons/favicon-196.png",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "在线 AI 编程平台，支持 AI 对话编程和一键部署",
+      "category": ["编程"],
+      "tagline": "在线 AI 编程和部署"
+    },
+    "en": {
+      "desc": "Online AI coding platform with AI chat coding and one-click deploy",
+      "category": ["Coding"],
+      "tagline": "Online AI code & deploy"
+    }
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt.new",
+    "url": "https://bolt.new",
+    "logo": "https://bolt.new/favicon.ico",
+    "pricing": "freemium",
+    "hot": true,
+    "featured": true,
+    "zh": {
+      "desc": "AI 全栈开发，对话式生成完整 Web 应用并一键部署",
+      "category": ["编程"],
+      "tagline": "AI 对话生成完整 Web 应用"
+    },
+    "en": {
+      "desc": "AI full-stack dev: generate complete web apps from chat, deploy instantly",
+      "category": ["Coding"],
+      "tagline": "AI full-stack web app builder"
+    }
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "logo": "https://lovable.dev/favicon.ico",
+    "pricing": "freemium",
+    "hot": true,
+    "zh": {
+      "desc": "AI 全栈应用生成器，自然语言描述即可生成可部署的应用",
+      "category": ["编程"],
+      "tagline": "自然语言生成可部署应用"
+    },
+    "en": {
+      "desc": "AI full-stack app generator from natural language, deploy-ready",
+      "category": ["Coding"],
+      "tagline": "NL to deployable full-stack apps"
+    }
+  },
+  {
+    "id": "intercom",
+    "name": "Intercom AI",
+    "url": "https://intercom.com",
+    "logo": "https://www.intercom.com/favicon.ico",
+    "pricing": "paid",
+    "zh": {
+      "desc": "AI 客服机器人，自动回复客户问题，降低人工成本",
+      "category": ["效率工具"],
+      "tagline": "AI 客服自动化"
+    },
+    "en": {
+      "desc": "AI customer service bot, auto-respond to reduce support costs",
+      "category": ["Productivity"],
+      "tagline": "AI customer service automation"
+    }
+  },
+  {
+    "id": "tldv",
+    "name": "tl;dv",
+    "url": "https://tldv.io",
+    "logo": "https://tldv.io/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 会议记录，自动转录、总结、提取行动项",
+      "category": ["效率工具"],
+      "tagline": "AI 会议记录和总结"
+    },
+    "en": {
+      "desc": "AI meeting recorder: auto-transcribe, summarize, extract action items",
+      "category": ["Productivity"],
+      "tagline": "AI meeting notes & summary"
+    }
+  },
+  {
+    "id": "read-ai",
+    "name": "Read AI",
+    "url": "https://read.ai",
+    "logo": "https://read.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 会议分析，实时情绪分析和参与度追踪",
+      "category": ["效率工具"],
+      "tagline": "AI 会议分析和洞察"
+    },
+    "en": {
+      "desc": "AI meeting analytics with real-time sentiment and engagement tracking",
+      "category": ["Productivity"],
+      "tagline": "AI meeting analytics"
+    }
+  },
+  {
+    "id": "whisper",
+    "name": "Whisper",
+    "url": "https://openai.com/research/whisper",
+    "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
+    "pricing": "free",
+    "zh": {
+      "desc": "OpenAI 开源语音识别模型，支持多语言转录",
+      "category": ["音频"],
+      "tagline": "开源多语言语音识别"
+    },
+    "en": {
+      "desc": "OpenAI's open-source speech recognition, multilingual transcription",
+      "category": ["Audio"],
+      "tagline": "Open-source multilingual speech recognition"
+    }
+  },
+  {
+    "id": "speechify",
+    "name": "Speechify",
+    "url": "https://speechify.com",
+    "logo": "https://speechify.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 文本转语音，自然流畅，支持多语言",
+      "category": ["音频"],
+      "tagline": "AI 文本转语音"
+    },
+    "en": {
+      "desc": "AI text-to-speech, natural and fluent, multilingual",
+      "category": ["Audio"],
+      "tagline": "AI text-to-speech"
+    }
+  },
+  {
+    "id": "napkin",
+    "name": "Napkin AI",
+    "url": "https://napkin.ai",
+    "logo": "https://napkin.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 将文字自动转化为信息图、流程图等可视化内容",
+      "category": ["设计", "效率工具"],
+      "tagline": "AI 文字转信息图"
+    },
+    "en": {
+      "desc": "AI turns text into infographics, flowcharts, and visuals",
+      "category": ["Design", "Productivity"],
+      "tagline": "AI text to infographic"
+    }
+  },
+  {
+    "id": "miro-ai",
+    "name": "Miro AI",
+    "url": "https://miro.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/miro-1.svg",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 白板协作，自动生成思维导图、总结内容",
+      "category": ["效率工具", "设计"],
+      "tagline": "AI 白板协作"
+    },
+    "en": {
+      "desc": "AI whiteboard collaboration: auto-generate mind maps, summarize",
+      "category": ["Productivity", "Design"],
+      "tagline": "AI whiteboard collaboration"
+    }
+  },
+  {
+    "id": "zapier-ai",
+    "name": "Zapier AI",
+    "url": "https://zapier.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/zapier-1.svg",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 自动化工作流，连接 6000+ 应用，自然语言创建自动化",
+      "category": ["效率工具"],
+      "tagline": "AI 自动化工作流"
+    },
+    "en": {
+      "desc": "AI automation workflows connecting 6000+ apps via natural language",
+      "category": ["Productivity"],
+      "tagline": "AI automation workflows"
+    }
+  },
+  {
+    "id": "make-ai",
+    "name": "Make (Integromat)",
+    "url": "https://make.com",
+    "logo": "https://www.make.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "可视化自动化平台，支持 AI 模块集成",
+      "category": ["效率工具"],
+      "tagline": "可视化 AI 自动化平台"
+    },
+    "en": {
+      "desc": "Visual automation platform with AI module integration",
+      "category": ["Productivity"],
+      "tagline": "Visual AI automation platform"
+    }
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "url": "https://pika.art",
+    "logo": "https://pika.art/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 视频生成，文字/图片转视频，风格多样",
+      "category": ["视频"],
+      "tagline": "AI 文字图片转视频"
+    },
+    "en": {
+      "desc": "AI video generation: text/image to video, diverse styles",
+      "category": ["Video"],
+      "tagline": "AI text/image to video"
+    }
+  },
+  {
+    "id": "luma",
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai",
+    "logo": "https://lumalabs.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 视频生成，高质量、物理准确的视频内容",
+      "category": ["视频"],
+      "tagline": "高质量 AI 视频生成"
+    },
+    "en": {
+      "desc": "AI video generation with high quality and physics accuracy",
+      "category": ["Video"],
+      "tagline": "High-quality AI video generation"
+    }
+  },
+  {
+    "id": "kimi",
+    "name": "Kimi",
+    "url": "https://kimi.moonshot.cn",
+    "logo": "https://kimi.moonshot.cn/favicon.ico",
+    "pricing": "free",
+    "hot": true,
+    "zh": {
+      "desc": "月之暗面出品，超长上下文对话，擅长文档分析",
+      "category": ["对话助手"],
+      "tagline": "超长上下文 AI 对话"
+    },
+    "en": {
+      "desc": "By Moonshot AI: ultra-long context conversation, great at document analysis",
+      "category": ["Chatbot"],
+      "tagline": "Ultra-long context AI chat"
+    }
+  },
+  {
+    "id": "doubao",
+    "name": "豆包",
+    "url": "https://www.doubao.com",
+    "logo": "https://www.doubao.com/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "字节跳动 AI 助手，免费好用，深度整合抖音生态",
+      "category": ["对话助手"],
+      "tagline": "字节跳动免费 AI 助手"
+    },
+    "en": {
+      "desc": "ByteDance's free AI assistant, integrated with TikTok ecosystem",
+      "category": ["Chatbot"],
+      "tagline": "ByteDance free AI assistant"
+    }
+  },
+  {
+    "id": "tongyi",
+    "name": "通义千问",
+    "url": "https://tongyi.aliyun.com",
+    "logo": "https://img.alicdn.com/imgextra/i1/O1CN01AKUdpI1sSUmCUWBmI_!!6000000005766-2-tps-124-122.png",
+    "pricing": "free",
+    "zh": {
+      "desc": "阿里巴巴大模型，免费使用，支持多种模态",
+      "category": ["对话助手"],
+      "tagline": "阿里免费大模型"
+    },
+    "en": {
+      "desc": "Alibaba's LLM, free to use, supports multiple modalities",
+      "category": ["Chatbot"],
+      "tagline": "Alibaba's free LLM"
+    }
+  },
+  {
+    "id": "ernie",
+    "name": "文心一言",
+    "url": "https://yiyan.baidu.com",
+    "logo": "https://yiyan.baidu.com/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "百度大模型，中文理解能力强，整合百度搜索",
+      "category": ["对话助手"],
+      "tagline": "百度中文大模型"
+    },
+    "en": {
+      "desc": "Baidu's LLM with strong Chinese understanding, integrated with Baidu Search",
+      "category": ["Chatbot"],
+      "tagline": "Baidu's Chinese LLM"
+    }
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "url": "https://codeium.com/windsurf",
+    "logo": "https://codeium.com/favicon.ico",
+    "pricing": "freemium",
+    "hot": true,
+    "zh": {
+      "desc": "AI 编程 IDE，Codeium 出品，Cascade 智能编程体验",
+      "category": ["编程"],
+      "tagline": "AI 智能编程 IDE"
+    },
+    "en": {
+      "desc": "AI code editor by Codeium with Cascade intelligent coding",
+      "category": ["Coding"],
+      "tagline": "AI intelligent code editor"
+    }
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "url": "https://aider.chat",
+    "logo": "https://aider.chat/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "开源 AI 终端编程助手，支持 Git 集成",
+      "category": ["编程"],
+      "tagline": "开源 AI 终端编程助手"
+    },
+    "en": {
+      "desc": "Open-source AI terminal coding assistant with Git integration",
+      "category": ["Coding"],
+      "tagline": "Open-source AI terminal coder"
+    }
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "url": "https://claude.ai/code",
+    "logo": "https://cdn.worldvectorlogo.com/logos/anthropic-2.svg",
+    "pricing": "paid",
+    "hot": true,
+    "zh": {
+      "desc": "Anthropic 官方 CLI 编程工具，终端内直接 AI 编程",
+      "category": ["编程"],
+      "tagline": "Anthropic 官方 CLI 编程工具"
+    },
+    "en": {
+      "desc": "Anthropic's official CLI coding tool, AI coding in your terminal",
+      "category": ["Coding"],
+      "tagline": "Anthropic's official CLI coding tool"
+    }
+  },
+  {
+    "id": "chatglm",
+    "name": "智谱清言",
+    "url": "https://chatglm.cn",
+    "logo": "https://chatglm.cn/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "智谱 AI 出品的大模型对话工具，中文能力强",
+      "category": ["对话助手"],
+      "tagline": "智谱 AI 中文对话"
+    },
+    "en": {
+      "desc": "ChatGLM by Zhipu AI, strong Chinese language capabilities",
+      "category": ["Chatbot"],
+      "tagline": "Zhipu AI Chinese chat"
+    }
+  },
+  {
+    "id": "spark",
+    "name": "讯飞星火",
+    "url": "https://xinghuo.xfyun.cn",
+    "logo": "https://xinghuo.xfyun.cn/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "科大讯飞大模型，语音交互出色，教育场景强",
+      "category": ["对话助手"],
+      "tagline": "科大讯飞语音 AI"
+    },
+    "en": {
+      "desc": "iFlytek's LLM with excellent voice interaction and education focus",
+      "category": ["Chatbot"],
+      "tagline": "iFlytek voice AI"
+    }
+  },
+  {
+    "id": "character-ai",
+    "name": "Character.AI",
+    "url": "https://character.ai",
+    "logo": "https://character.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 角色扮演平台，可与各种虚拟角色对话",
+      "category": ["对话助手"],
+      "tagline": "AI 角色扮演对话"
+    },
+    "en": {
+      "desc": "AI character roleplay platform, chat with virtual characters",
+      "category": ["Chatbot"],
+      "tagline": "AI character roleplay"
+    }
+  },
+  {
+    "id": "writesonic",
+    "name": "Writesonic",
+    "url": "https://writesonic.com",
+    "logo": "https://writesonic.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 写作助手，支持文章、广告文案、产品描述等",
+      "category": ["写作", "营销"],
+      "tagline": "AI 多场景写作助手"
+    },
+    "en": {
+      "desc": "AI writing assistant for articles, ads, product descriptions",
+      "category": ["Writing", "Marketing"],
+      "tagline": "AI multi-scene writing"
+    }
+  },
+  {
+    "id": "quillbot",
+    "name": "QuillBot",
+    "url": "https://quillbot.com",
+    "logo": "https://quillbot.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 改写和润色工具，支持多种改写模式",
+      "category": ["写作"],
+      "tagline": "AI 改写润色工具"
+    },
+    "en": {
+      "desc": "AI paraphrasing and writing enhancement with multiple modes",
+      "category": ["Writing"],
+      "tagline": "AI paraphrasing tool"
+    }
+  },
+  {
+    "id": "tabnine",
+    "name": "Tabnine",
+    "url": "https://tabnine.com",
+    "logo": "https://www.tabnine.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 代码补全工具，支持所有主流 IDE，注重隐私",
+      "category": ["编程"],
+      "tagline": "AI 代码补全，注重隐私"
+    },
+    "en": {
+      "desc": "AI code completion for all major IDEs, privacy-focused",
+      "category": ["Coding"],
+      "tagline": "AI code completion, privacy-first"
+    }
+  },
+  {
+    "id": "cody",
+    "name": "Sourcegraph Cody",
+    "url": "https://sourcegraph.com/cody",
+    "logo": "https://sourcegraph.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 编程助手，理解整个代码库上下文",
+      "category": ["编程"],
+      "tagline": "理解整个代码库的 AI 助手"
+    },
+    "en": {
+      "desc": "AI coding assistant that understands your entire codebase",
+      "category": ["Coding"],
+      "tagline": "AI that understands your codebase"
+    }
+  },
+  {
+    "id": "continue-dev",
+    "name": "Continue",
+    "url": "https://continue.dev",
+    "logo": "https://continue.dev/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "开源 AI 编程助手，可自定义模型和上下文",
+      "category": ["编程"],
+      "tagline": "开源可定制 AI 编程助手"
+    },
+    "en": {
+      "desc": "Open-source AI coding assistant with customizable models",
+      "category": ["Coding"],
+      "tagline": "Open-source customizable AI coder"
+    }
+  },
+  {
+    "id": "amazon-q",
+    "name": "Amazon Q Developer",
+    "url": "https://aws.amazon.com/q/developer",
+    "logo": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AWS AI 编程助手，深度整合 AWS 服务",
+      "category": ["编程"],
+      "tagline": "AWS AI 编程助手"
+    },
+    "en": {
+      "desc": "AWS AI coding assistant, deeply integrated with AWS services",
+      "category": ["Coding"],
+      "tagline": "AWS AI coding assistant"
+    }
+  },
+  {
+    "id": "leonardo",
+    "name": "Leonardo.ai",
+    "url": "https://leonardo.ai",
+    "logo": "https://leonardo.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 图像生成平台，游戏和创意素材方向突出",
+      "category": ["图像生成"],
+      "tagline": "AI 创意图像生成"
+    },
+    "en": {
+      "desc": "AI image generation platform, strong in game and creative assets",
+      "category": ["Image Generation"],
+      "tagline": "AI creative image generation"
+    }
+  },
+  {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "url": "https://ideogram.ai",
+    "logo": "https://ideogram.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 图像生成，文字渲染效果最佳",
+      "category": ["图像生成"],
+      "tagline": "文字渲染最佳的 AI 绘画"
+    },
+    "en": {
+      "desc": "AI image generation with best-in-class text rendering",
+      "category": ["Image Generation"],
+      "tagline": "Best text rendering in AI art"
+    }
+  },
+  {
+    "id": "firefly",
+    "name": "Adobe Firefly",
+    "url": "https://firefly.adobe.com",
+    "logo": "https://www.adobe.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "Adobe AI 图像生成，商业安全，整合 Photoshop",
+      "category": ["图像生成", "设计"],
+      "tagline": "Adobe 商业安全 AI 绘画"
+    },
+    "en": {
+      "desc": "Adobe's AI image generation, commercially safe, integrated with Photoshop",
+      "category": ["Image Generation", "Design"],
+      "tagline": "Adobe commercially safe AI art"
+    }
+  },
+  {
+    "id": "tongyi-wanxiang",
+    "name": "通义万相",
+    "url": "https://wanx.aliyun.com",
+    "logo": "https://img.alicdn.com/imgextra/i1/O1CN01AKUdpI1sSUmCUWBmI_!!6000000005766-2-tps-124-122.png",
+    "pricing": "free",
+    "zh": {
+      "desc": "阿里 AI 图像生成，中文理解好，免费使用",
+      "category": ["图像生成"],
+      "tagline": "阿里免费 AI 绘画"
+    },
+    "en": {
+      "desc": "Alibaba's AI image generation with good Chinese understanding, free",
+      "category": ["Image Generation"],
+      "tagline": "Alibaba free AI art"
+    }
+  },
+  {
+    "id": "jimeng",
+    "name": "即梦 AI",
+    "url": "https://jimeng.jianying.com",
+    "logo": "https://jimeng.jianying.com/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "字节跳动 AI 图像和视频生成，免费好用",
+      "category": ["图像生成", "视频"],
+      "tagline": "字节免费 AI 绘画和视频"
+    },
+    "en": {
+      "desc": "ByteDance's free AI image and video generation",
+      "category": ["Image Generation", "Video"],
+      "tagline": "ByteDance free AI art & video"
+    }
+  },
+  {
+    "id": "sora",
+    "name": "Sora",
+    "url": "https://sora.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
+    "pricing": "paid",
+    "hot": true,
+    "zh": {
+      "desc": "OpenAI 视频生成模型，效果惊艳，文生视频标杆",
+      "category": ["视频"],
+      "tagline": "OpenAI 文生视频标杆"
+    },
+    "en": {
+      "desc": "OpenAI's video generation model, stunning results, text-to-video benchmark",
+      "category": ["Video"],
+      "tagline": "OpenAI text-to-video benchmark"
+    }
+  },
+  {
+    "id": "opus-clip",
+    "name": "Opus Clip",
+    "url": "https://opus.pro",
+    "logo": "https://opus.pro/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 自动将长视频剪辑成短视频，适合短视频创作者",
+      "category": ["视频"],
+      "tagline": "AI 长视频自动剪短视频"
+    },
+    "en": {
+      "desc": "AI auto-clips long videos into short-form content for creators",
+      "category": ["Video"],
+      "tagline": "AI long-to-short video clipper"
+    }
+  },
+  {
+    "id": "capcut",
+    "name": "CapCut (剪映)",
+    "url": "https://capcut.com",
+    "logo": "https://www.capcut.com/favicon.ico",
+    "pricing": "free",
+    "zh": {
+      "desc": "字节跳动免费视频编辑工具，内置丰富 AI 功能",
+      "category": ["视频"],
+      "tagline": "免费 AI 视频编辑"
+    },
+    "en": {
+      "desc": "ByteDance's free video editor with rich AI features",
+      "category": ["Video"],
+      "tagline": "Free AI video editor"
+    }
+  },
+  {
+    "id": "tome",
+    "name": "Tome",
+    "url": "https://tome.app",
+    "logo": "https://tome.app/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 演示文稿生成，输入主题自动生成完整 PPT",
+      "category": ["效率工具", "设计"],
+      "tagline": "AI 自动生成 PPT"
+    },
+    "en": {
+      "desc": "AI presentation generation: create full decks from a topic",
+      "category": ["Productivity", "Design"],
+      "tagline": "AI auto-generate presentations"
+    }
+  },
+  {
+    "id": "slidesai",
+    "name": "SlidesAI",
+    "url": "https://slidesai.io",
+    "logo": "https://slidesai.io/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "Google Slides AI 插件，文字转演示文稿",
+      "category": ["效率工具"],
+      "tagline": "Google Slides AI 插件"
+    },
+    "en": {
+      "desc": "Google Slides AI plugin: text to presentation",
+      "category": ["Productivity"],
+      "tagline": "Google Slides AI plugin"
+    }
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "url": "https://n8n.io",
+    "logo": "https://n8n.io/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "开源自动化工作流平台，支持 AI 节点，可自托管",
+      "category": ["效率工具", "编程"],
+      "tagline": "开源自动化工作流"
+    },
+    "en": {
+      "desc": "Open-source automation workflow with AI nodes, self-hostable",
+      "category": ["Productivity", "Coding"],
+      "tagline": "Open-source automation workflows"
+    }
+  },
+  {
+    "id": "deepl",
+    "name": "DeepL",
+    "url": "https://deepl.com",
+    "logo": "https://www.deepl.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "最精准的 AI 翻译工具，质量超过 Google 翻译",
+      "category": ["效率工具"],
+      "tagline": "最精准的 AI 翻译"
+    },
+    "en": {
+      "desc": "Most accurate AI translation tool, surpasses Google Translate",
+      "category": ["Productivity"],
+      "tagline": "Most accurate AI translation"
+    }
+  },
+  {
+    "id": "fireflies",
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai",
+    "logo": "https://fireflies.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 会议转录和分析，自动记录、总结、搜索会议内容",
+      "category": ["效率工具"],
+      "tagline": "AI 会议转录和分析"
+    },
+    "en": {
+      "desc": "AI meeting transcription and analysis, auto-record and summarize",
+      "category": ["Productivity"],
+      "tagline": "AI meeting transcription & analysis"
+    }
+  },
+  {
+    "id": "notta",
+    "name": "Notta",
+    "url": "https://notta.ai",
+    "logo": "https://notta.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 语音转文字，支持中日英等多语言实时转录",
+      "category": ["效率工具", "音频"],
+      "tagline": "多语言 AI 语音转文字"
+    },
+    "en": {
+      "desc": "AI speech-to-text with real-time multilingual transcription",
+      "category": ["Productivity", "Audio"],
+      "tagline": "Multilingual AI speech-to-text"
+    }
+  },
+  {
+    "id": "murf",
+    "name": "Murf.ai",
+    "url": "https://murf.ai",
+    "logo": "https://murf.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 配音平台，120+ 真实声音，适合视频配音",
+      "category": ["音频"],
+      "tagline": "AI 配音平台"
+    },
+    "en": {
+      "desc": "AI voiceover platform with 120+ realistic voices for videos",
+      "category": ["Audio"],
+      "tagline": "AI voiceover platform"
+    }
+  },
+  {
+    "id": "udio",
+    "name": "Udio",
+    "url": "https://udio.com",
+    "logo": "https://udio.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 音乐生成，质量媲美 Suno，风格多样",
+      "category": ["音频"],
+      "tagline": "AI 音乐生成新选择"
+    },
+    "en": {
+      "desc": "AI music generation rivaling Suno, diverse styles",
+      "category": ["Audio"],
+      "tagline": "AI music generation alternative"
+    }
+  },
+  {
+    "id": "surfer-seo",
+    "name": "Surfer SEO",
+    "url": "https://surferseo.com",
+    "logo": "https://surferseo.com/favicon.ico",
+    "pricing": "paid",
+    "zh": {
+      "desc": "AI SEO 优化工具，分析关键词、优化内容排名",
+      "category": ["营销"],
+      "tagline": "AI SEO 内容优化"
+    },
+    "en": {
+      "desc": "AI SEO tool for keyword analysis and content ranking optimization",
+      "category": ["Marketing"],
+      "tagline": "AI SEO content optimization"
+    }
+  },
+  {
+    "id": "hubspot-ai",
+    "name": "HubSpot AI",
+    "url": "https://hubspot.com",
+    "logo": "https://www.hubspot.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "HubSpot 内置 AI，营销、销售、客服全链路 AI 赋能",
+      "category": ["营销", "效率工具"],
+      "tagline": "全链路 AI 营销平台"
+    },
+    "en": {
+      "desc": "HubSpot's built-in AI for marketing, sales, and service",
+      "category": ["Marketing", "Productivity"],
+      "tagline": "Full-chain AI marketing platform"
+    }
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "url": "https://elicit.com",
+    "logo": "https://elicit.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 研究助手，自动分析学术论文、提取关键信息",
+      "category": ["效率工具"],
+      "tagline": "AI 学术研究助手"
+    },
+    "en": {
+      "desc": "AI research assistant: auto-analyze papers, extract key findings",
+      "category": ["Productivity"],
+      "tagline": "AI academic research assistant"
+    }
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "url": "https://consensus.app",
+    "logo": "https://consensus.app/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 学术搜索引擎，从论文中提取科学共识",
+      "category": ["搜索"],
+      "tagline": "AI 学术共识搜索"
+    },
+    "en": {
+      "desc": "AI academic search: extract scientific consensus from papers",
+      "category": ["Search"],
+      "tagline": "AI scientific consensus search"
+    }
+  },
+  {
+    "id": "rows-ai",
+    "name": "Rows AI",
+    "url": "https://rows.com",
+    "logo": "https://rows.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 电子表格，用自然语言分析数据",
+      "category": ["效率工具"],
+      "tagline": "AI 电子表格数据分析"
+    },
+    "en": {
+      "desc": "AI spreadsheet: analyze data with natural language",
+      "category": ["Productivity"],
+      "tagline": "AI spreadsheet data analysis"
+    }
+  },
+  {
+    "id": "claude-artifacts",
+    "name": "Claude Artifacts",
+    "url": "https://claude.ai",
+    "logo": "https://cdn.worldvectorlogo.com/logos/anthropic-2.svg",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "Claude 的代码和可视化预览功能，实时生成和运行代码",
+      "category": ["编程", "效率工具"],
+      "tagline": "Claude 实时代码预览"
+    },
+    "en": {
+      "desc": "Claude's code and visualization preview, real-time code generation",
+      "category": ["Coding", "Productivity"],
+      "tagline": "Claude real-time code preview"
+    }
+  },
+  {
+    "id": "glean",
+    "name": "Glean",
+    "url": "https://glean.com",
+    "logo": "https://glean.com/favicon.ico",
+    "pricing": "paid",
+    "zh": {
+      "desc": "企业 AI 搜索和知识管理，连接所有内部工具",
+      "category": ["效率工具"],
+      "tagline": "企业 AI 搜索和知识管理"
+    },
+    "en": {
+      "desc": "Enterprise AI search and knowledge management, connects all tools",
+      "category": ["Productivity"],
+      "tagline": "Enterprise AI search & knowledge"
+    }
+  },
+  {
+    "id": "grammarly-go",
+    "name": "Grammarly GO",
+    "url": "https://grammarly.com",
+    "logo": "https://cdn.worldvectorlogo.com/logos/grammarly-1.svg",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "Grammarly AI 生成式写作，一键改写、生成、优化",
+      "category": ["写作"],
+      "tagline": "Grammarly AI 生成式写作"
+    },
+    "en": {
+      "desc": "Grammarly's generative AI: rewrite, generate, optimize in one click",
+      "category": ["Writing"],
+      "tagline": "Grammarly generative AI writing"
+    }
+  },
+  {
+    "id": "framer-ai",
+    "name": "Framer AI",
+    "url": "https://framer.com",
+    "logo": "https://www.framer.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 网站生成器，描述需求即可生成可部署的网站",
+      "category": ["设计", "编程"],
+      "tagline": "AI 一键生成网站"
+    },
+    "en": {
+      "desc": "AI website generator: describe your needs, get a deployable site",
+      "category": ["Design", "Coding"],
+      "tagline": "AI one-click website builder"
+    }
+  },
+  {
+    "id": "webflow-ai",
+    "name": "Webflow AI",
+    "url": "https://webflow.com",
+    "logo": "https://webflow.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "Webflow AI 功能，AI 辅助网页设计和内容生成",
+      "category": ["设计", "编程"],
+      "tagline": "Webflow AI 网页设计"
+    },
+    "en": {
+      "desc": "Webflow AI features: AI-assisted web design and content generation",
+      "category": ["Design", "Coding"],
+      "tagline": "Webflow AI web design"
+    }
+  },
+  {
+    "id": "bardeen",
+    "name": "Bardeen",
+    "url": "https://bardeen.ai",
+    "logo": "https://bardeen.ai/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 浏览器自动化，自动执行重复性网页操作",
+      "category": ["效率工具"],
+      "tagline": "AI 浏览器自动化"
+    },
+    "en": {
+      "desc": "AI browser automation: auto-execute repetitive web tasks",
+      "category": ["Productivity"],
+      "tagline": "AI browser automation"
+    }
+  },
+  {
+    "id": "phind",
+    "name": "Phind",
+    "url": "https://phind.com",
+    "logo": "https://www.phind.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "AI 编程搜索引擎，专为开发者设计的 AI 搜索",
+      "category": ["编程", "搜索"],
+      "tagline": "开发者 AI 搜索引擎"
+    },
+    "en": {
+      "desc": "AI search engine designed for developers",
+      "category": ["Coding", "Search"],
+      "tagline": "AI search engine for developers"
+    }
+  },
+  {
+    "id": "devin",
+    "name": "Devin",
+    "url": "https://devin.ai",
+    "logo": "https://devin.ai/favicon.ico",
+    "pricing": "paid",
+    "hot": true,
+    "zh": {
+      "desc": "首个 AI 软件工程师，能独立完成编程任务",
+      "category": ["编程"],
+      "tagline": "首个 AI 软件工程师"
+    },
+    "en": {
+      "desc": "The first AI software engineer, can independently complete coding tasks",
+      "category": ["Coding"],
+      "tagline": "The first AI software engineer"
+    }
+  },
+  {
+    "id": "khanmigo",
+    "name": "Khanmigo",
+    "url": "https://khanacademy.org/khan-labs",
+    "logo": "https://www.khanacademy.org/favicon.ico",
+    "pricing": "paid",
+    "zh": {
+      "desc": "可汗学院 AI 家教，苏格拉底式引导学习",
+      "category": ["教育"],
+      "tagline": "AI 苏格拉底式家教"
+    },
+    "en": {
+      "desc": "Khan Academy's AI tutor with Socratic teaching method",
+      "category": ["Education"],
+      "tagline": "AI Socratic tutor"
+    }
+  },
+  {
+    "id": "photomath",
+    "name": "Photomath",
+    "url": "https://photomath.com",
+    "logo": "https://photomath.com/favicon.ico",
+    "pricing": "freemium",
+    "zh": {
+      "desc": "拍照解数学题，AI 逐步解析解题过程",
+      "category": ["教育"],
+      "tagline": "拍照解数学题"
+    },
+    "en": {
+      "desc": "Scan math problems, AI explains step-by-step solutions",
+      "category": ["Education"],
+      "tagline": "Scan & solve math problems"
+    }
+  },
+  {
+    "id": "duolingo-max",
+    "name": "Duolingo Max",
+    "url": "https://duolingo.com",
+    "logo": "https://d35aaqx5ub95lt.cloudfront.net/favicon.ico",
+    "pricing": "paid",
+    "zh": {
+      "desc": "Duolingo AI 语言学习，AI 角色对话练习和解释",
+      "category": ["教育"],
+      "tagline": "AI 语言学习对话"
+    },
+    "en": {
+      "desc": "Duolingo AI language learning with AI roleplay and explanations",
+      "category": ["Education"],
+      "tagline": "AI language learning chat"
+    }
+  }
+]
