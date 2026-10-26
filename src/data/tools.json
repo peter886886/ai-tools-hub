@@ -1678,5 +1678,28 @@
       "category": ["Education"],
       "tagline": "AI language learning chat"
     }
+  },
+  {
+    "id": "agent-qa",
+    "name": "agent-qa",
+    "url": "https://vostride.com",
+    "logo": "https://www.vostride.com/icon.png?icon.1muy1ymeud8i8.png",
+    "pricing": "free",
+    "featured": false,
+    "hot": false,
+    "zh": {
+      "desc": "用自然语言测试 Web、Android 和 iOS 应用，结合持久记忆、经验证的自我改进及 CLI/MCP 接口。本地软件免费，模型服务费用另计。",
+      "category": [
+        "编程"
+      ],
+      "tagline": "具备持久记忆与自我改进能力的应用测试智能体"
+    },
+    "en": {
+      "desc": "Natural-language testing for web, Android and iOS apps with persistent memory, validated self-improvement and CLI/MCP access. Local software is free; model-provider fees are separate.",
+      "category": [
+        "Coding"
+      ],
+      "tagline": "Application testing with persistent memory and self-improvement"
+    }
   }
 ]
